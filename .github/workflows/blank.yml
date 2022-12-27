@@ -2,4 +2,4 @@ name: Simple pipeline to build firmware and save generated image
 on:
   push:
   schedule:
-    - cron:  "30 17 * * *" #build project everyday at hour 3, minute 7, and hour 15 and minute 7 (aka 3:07 and 15:07)
+    - cron:  "28 17 * * *" #build project everyday at hour 3, minute 7, and hour 15 and minute 7 (aka 3:07 and 15:07)
