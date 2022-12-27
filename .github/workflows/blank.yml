@@ -2,4 +2,13 @@ name: Simple pipeline to build firmware and save generated image
 on:
   push:
   schedule:
-    - cron:  "28 17 * * *" #build project everyday at hour 3, minute 7, and hour 15 and minute 7 (aka 3:07 and 15:07)
+    - cron:  "5 19 * * *" #build project everyday at hour 3, minute 7, and hour 15 and minute 7 (aka 3:07 and 15:07)
+
+jobs:
+  build:
+    runs-on: ubuntu-22.04
+    steps:
+    - name: INIT
+    run: |
+      sudo apt-get update
+      echo "UPDATED PACKAGES WITH THE ONES IN THE UBUNTU REPOSITORY"
